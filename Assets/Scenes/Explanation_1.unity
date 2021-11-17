@@ -291,7 +291,7 @@ MonoBehaviour:
   m_Text: 'Now, Click to Begin
 
 
-    Practice (Clear 5 times)'
+    Practice (5 times)'
 --- !u!222 &645906442
 CanvasRenderer:
   m_ObjectHideFlags: 0

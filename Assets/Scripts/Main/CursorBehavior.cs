@@ -87,6 +87,28 @@ public class CursorBehavior : MonoBehaviour
 			Vector3 movement = Input.mousePosition - last_mouse_position;
 			last_mouse_position = Input.mousePosition;
 			transform.position += movement;
+
+			float distance_d, distance_g;
+			touching = false;
+			foreach (TargetBehavior dummy in pop.dummies) {
+				if (dummy) {
+					distance_d = Vector3.Distance(transform.position, dummy.transform.position);
+					if (distance_d <= target_size / 2) {
+						sprite_renderer.sprite = push;
+						touching = true;
+					}
+				}
+			}
+			if (pop.goal) {
+				distance_g = Vector3.Distance(transform.position, pop.goal.transform.position);
+				if (distance_g <= target_size / 2) {
+					sprite_renderer.sprite = push;
+					touching = true;
+				}
+			}
+			if (!touching) {
+				sprite_renderer.sprite = normal;
+			}
 		}
 
 		if (transform.position.x < -600)

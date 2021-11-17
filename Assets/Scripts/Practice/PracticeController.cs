@@ -25,7 +25,7 @@ public class PracticeController : MonoBehaviour
 			}
 			++wait_frame;
 			if (wait_frame >= 25) {
-				if (Counter.clear >= clear_number) {
+				if (Counter.clear + Counter.miss >= clear_number) {
 					Counter.clear = 0;
 					Counter.miss = 0;
 					Counter.elapsed_frame = 0;
