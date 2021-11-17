@@ -1,9 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
-public class Title : MonoBehaviour
+public class CalibrationMouseText : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,10 +13,6 @@ public class Title : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) {
-            SceneManager.LoadScene("SelectSize");
-        }
-        if (Input.GetKey(KeyCode.Escape))
-            SceneController.Quit();
+        gameObject.GetComponent<UnityEngine.UI.Text>().text = $"mouse position: ({Input.mousePosition.x - 600}, {Input.mousePosition.y - 450})";
     }
 }

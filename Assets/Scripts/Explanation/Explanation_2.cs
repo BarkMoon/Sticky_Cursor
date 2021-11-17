@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class Result : MonoBehaviour
+public class Explanation_2 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,9 +14,9 @@ public class Result : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.GetComponent<UnityEngine.UI.Text>().text = $"Clear {Counter.clear} / Miss {Counter.miss}\n\nElapsed Time: {Counter.elapsed_frame * 0.02f}";
         if (Input.GetMouseButtonDown(0)) {
-            SceneManager.LoadScene("Title");
+            SceneController.is_in_practice = false;
+            SceneManager.LoadScene("Calibration");
         }
         if (Input.GetKey(KeyCode.Escape))
             SceneController.Quit();

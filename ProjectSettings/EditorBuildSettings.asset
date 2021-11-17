@@ -6,9 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/Title.unity
+    guid: 3b215d1fd79003b42b7b245ae9b22151
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/Wait.unity
     guid: 4d3686ac8d1580f49bc2c534848bf70c
+  - enabled: 1
+    path: Assets/Scenes/Result.unity
+    guid: 7647f1efea299b3499f6d2015bb0bf8b
+  - enabled: 1
+    path: Assets/Scenes/Calibration.unity
+    guid: aee376a7245d0d24ba3adddfa89b800e
+  - enabled: 1
+    path: Assets/Scenes/SelectSize.unity
+    guid: 4ba7c4ec13d2a7641a8cc81024ce79be
+  - enabled: 1
+    path: Assets/Scenes/SelectSpeed.unity
+    guid: 406fde943ba7e344aa69eedf24093a9c
+  - enabled: 1
+    path: Assets/Scenes/Explanation_1.unity
+    guid: 2010eda4627ad29448061e087eb86fde
+  - enabled: 1
+    path: Assets/Scenes/Explanation_2.unity
+    guid: 22452bb9bd294aa458f588396394d8a4
+  - enabled: 1
+    path: Assets/Scenes/Practice.unity
+    guid: dafd8c6338dfd754ba298c93365ea75e
+  - enabled: 1
+    path: Assets/Scenes/SelectSticky.unity
+    guid: cfcaa814c8aca484b89be70b40149625
   m_configObjects: {}
