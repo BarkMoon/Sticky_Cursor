@@ -20,6 +20,7 @@ public class Counter : MonoBehaviour
 
 	void FixedUpdate()
 	{
-		++elapsed_frame;
+		if (!SceneController.finished)
+			++elapsed_frame;
 	}
 }
