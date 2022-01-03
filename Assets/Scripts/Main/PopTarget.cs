@@ -22,7 +22,14 @@ public class PopTarget : MonoBehaviour
 		XMAX = 600 + target_size / 2;
 		YMAX = 450 + target_size / 2;
 
-		//Random.InitState(0);        // 乱数の初期シード
+		int seed = (SceneController.is_in_practice) ? Title.practice_seed_array[Counter.finish] : Title.seed_array[Counter.finish];
+		//Debug.Log(seed);
+		Random.InitState(seed);        // 乱数の初期シード
+
+		/*int r = Random.Range(0, 1000);
+		Debug.Log(r);
+		Random.InitState(r);*/
+
 
 		int x, y;
 		bool movement_x, is_plus;
@@ -87,6 +94,7 @@ public class PopTarget : MonoBehaviour
 			Vector3 pos = goal.transform.position;
 			if (pos.x < -XMAX || pos.x >= XMAX || pos.y < -YMAX || pos.y >= YMAX) {
 				Destroy(goal.gameObject);
+				++Counter.finish;
 			}
 		}
 		List<TargetBehavior> dummies_existing = new List<TargetBehavior>();

@@ -26,10 +26,7 @@ public class Timer : MonoBehaviour
             --count;
             if(count <= 0) {
                 cursor_position = cursor.transform.position;
-                if (SceneController.is_in_practice)
-                    SceneManager.LoadScene("Practice");
-                else
-                    SceneManager.LoadScene("Main");
+                SceneManager.LoadScene("Main");
             }
         }
         gameObject.GetComponent<UnityEngine.UI.Text>().text = $"{count}";

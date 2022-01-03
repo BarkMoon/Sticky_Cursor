@@ -133,7 +133,6 @@ public class CursorBehavior : MonoBehaviour
 					distance_d = Vector3.Distance(transform.position, dummy.transform.position);
 					if (distance_d <= target_size / 2) {
 						++failure;
-						Debug.Log(distance_d);
 					}
 				}
 			}
@@ -144,12 +143,14 @@ public class CursorBehavior : MonoBehaviour
 			}
 			if(failure == 0) {      // ¬Œ÷
 				++Counter.clear;
+				SceneController.cleared = true;
 				pop.goal.GetComponent<SpriteRenderer>().color = new Color(0, 1.0f, 0);
 				finish_text.GetComponent<UnityEngine.UI.Text>().text = "Success!";
 				finish_text.SetActive(true);
 			}
 			else {
 				++Counter.miss;
+				SceneController.cleared = false;
 				finish_text.GetComponent<UnityEngine.UI.Text>().text = "Failed";
 				finish_text.SetActive(true);
 			}

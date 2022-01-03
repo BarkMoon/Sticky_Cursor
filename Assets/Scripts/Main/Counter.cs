@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class Counter : MonoBehaviour
 {
-	public static int clear = 0, miss = 0;
+	public static int clear = 0, miss = 0, finish = 0;
 	public static int elapsed_frame = 0;
+	//public static List<int> elapsed_frame_result;
+	//public static List<bool> clear_result;
 
 	// Start is called before the first frame update
 	void Start()

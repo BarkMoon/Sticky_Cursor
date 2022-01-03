@@ -53,27 +53,25 @@
     <UnityVersion>2020.3.23f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\Select\SelectFast.cs" />
-    <Compile Include="Assets\Scripts\Select\SelectSmall.cs" />
     <Compile Include="Assets\Scripts\Main\PopTarget.cs" />
     <Compile Include="Assets\Scripts\Main\DebugText.cs" />
     <Compile Include="Assets\Scripts\Main\TargetBehavior.cs" />
     <Compile Include="Assets\Scripts\Result\Result.cs" />
     <Compile Include="Assets\Scripts\Calibration\CalibrationMouseText.cs" />
+    <Compile Include="Assets\Scripts\Result\ResultTimer.cs" />
     <Compile Include="Assets\Scripts\Wait\Timer.cs" />
-    <Compile Include="Assets\Scripts\Explanation\Explanation_1.cs" />
     <Compile Include="Assets\Scripts\Explanation\Explanation_2.cs" />
     <Compile Include="Assets\Scripts\Main\SceneController.cs" />
     <Compile Include="Assets\Scripts\Title\Title.cs" />
-    <Compile Include="Assets\Scripts\Select\SelectSlow.cs" />
     <Compile Include="Assets\Scripts\Wait\SimpleCursor.cs" />
-    <Compile Include="Assets\Scripts\Select\SelectBig.cs" />
-    <Compile Include="Assets\Scripts\Select\SelectSticky.cs" />
     <Compile Include="Assets\Scripts\Main\Counter.cs" />
     <Compile Include="Assets\Scripts\Main\CursorBehavior.cs" />
-    <Compile Include="Assets\Scripts\Practice\PracticeController.cs" />
+    <Compile Include="Assets\Scripts\Select\P1_SelectExperimentNumber.cs" />
     <Compile Include="Assets\Scripts\Calibration\CalibrationCursor.cs" />
-    <Compile Include="Assets\Scripts\Select\SelectNormal.cs" />
+    <Compile Include="Assets\Scripts\Select\P2_SelectExperimentNumber.cs" />
+    <Compile Include="Assets\Scripts\Title\Conditions.cs" />
+    <Compile Include="Assets\Scripts\Explanation\Explanation_1.cs" />
+    <Compile Include="Assets\Scripts\Practice\PracticeController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

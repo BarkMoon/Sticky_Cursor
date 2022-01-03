@@ -16,6 +16,10 @@ public class Explanation_2 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) {
             SceneController.is_in_practice = false;
+            Counter.clear = 0;
+            Counter.miss = 0;
+            Counter.finish = 0;
+            Counter.elapsed_frame = 0;
             SceneManager.LoadScene("Calibration");
         }
         if (Input.GetKey(KeyCode.Escape))
