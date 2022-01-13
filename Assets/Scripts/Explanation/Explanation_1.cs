@@ -16,8 +16,10 @@ public class Explanation_1 : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) {
             SceneController.is_in_practice = true;
-            Counter.clear = 0;
-            Counter.miss = 0;
+            Counter.success = 0;
+            Counter.failure = 0;
+            Counter.click_on_dummy = 0;
+            Counter.click_on_empty_space = 0;
             Counter.finish = 0;
             Counter.elapsed_frame = 0;
             SceneManager.LoadScene("Calibration");

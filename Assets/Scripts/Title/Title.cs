@@ -42,7 +42,7 @@ public class Title : MonoBehaviour
 			Counter.clear_result.Clear();*/
 			SceneManager.LoadScene("SelectExperimentNumber");
 		}
-		if (Input.GetKey(KeyCode.F1)) {
+		if (Input.GetMouseButtonDown(1)) {
 			SceneManager.LoadScene("Result");
 		}
 		if (Input.GetKey(KeyCode.Escape))

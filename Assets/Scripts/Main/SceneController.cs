@@ -8,7 +8,7 @@ public class SceneController : MonoBehaviour
 	PopTarget pop;
 	int wait_frame = 0;
 	public static bool finished = false;
-	public static bool cleared = true;
+	//public static bool cleared = true;
 	public static bool is_in_practice = true;
 
 	// Start is called before the first frame update
@@ -24,8 +24,8 @@ public class SceneController : MonoBehaviour
 	{
 		if (!pop.goal) {
 			if (!finished) {
-				++Counter.miss;
-				cleared = false;
+				++Counter.failure;
+				//cleared = false;
 				finished = true;
 			}
 			++wait_frame;

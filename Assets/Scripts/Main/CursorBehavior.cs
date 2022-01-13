@@ -126,35 +126,35 @@ public class CursorBehavior : MonoBehaviour
 			Cursor.lockState = CursorLockMode.None;
 
 		if (!SceneController.finished && Input.GetMouseButtonDown(0) && pop.goal) {
-			int failure = 0;
+			int failure_on_dummy = 0, failure_on_empty = 0;
 			float distance_d, distance_g;
 			foreach (TargetBehavior dummy in pop.dummies) {
 				if (dummy) {
 					distance_d = Vector3.Distance(transform.position, dummy.transform.position);
 					if (distance_d <= target_size / 2) {
-						++failure;
+						++failure_on_dummy;
 					}
 				}
 			}
 			distance_g = Vector3.Distance(transform.position, pop.goal.transform.position);
 			//Debug.Log(distance_g);
 			if (distance_g > target_size / 2) {
-				++failure;
+				++failure_on_empty;
 			}
-			if(failure == 0) {      // ê¨å˜
-				++Counter.clear;
-				SceneController.cleared = true;
+			if (failure_on_dummy > 0) {
+				++Counter.click_on_dummy;
+			}
+			else if(failure_on_empty > 0) {
+				++Counter.click_on_empty_space;
+            }
+			else {      // ê¨å˜
+				++Counter.success;
+				//SceneController.cleared = true;
 				pop.goal.GetComponent<SpriteRenderer>().color = new Color(0, 1.0f, 0);
 				finish_text.GetComponent<UnityEngine.UI.Text>().text = "Success!";
 				finish_text.SetActive(true);
+				SceneController.finished = true;
 			}
-			else {
-				++Counter.miss;
-				SceneController.cleared = false;
-				finish_text.GetComponent<UnityEngine.UI.Text>().text = "Failed";
-				finish_text.SetActive(true);
-			}
-			SceneController.finished = true;
 		}
 	}
 

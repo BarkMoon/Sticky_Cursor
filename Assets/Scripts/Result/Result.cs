@@ -14,21 +14,22 @@ public class Result : MonoBehaviour
 		Cursor.visible = true;
 
 		sb = new StringBuilder();
-		
+
 		/*string spd = (PopTarget.target_speed == Conditions.FastSpeed) ? "Fast/" : "Slow/";
 		sb.Append(spd);
 		string sz = (PopTarget.target_size == Conditions.BigSize) ? "Big/" : "Small/";
 		sb.Append(sz);
-		string stk = (CursorBehavior.is_sticky) ? "Sticky" : "Normal";
-		sb.Append(stk);
-		sb.Append("\n");
 
 		int total_frame = 0;
 		foreach(int frame in Counter.elapsed_frame_result) {
 			total_frame += frame;
 		}*/
 
-		sb.Append($"Clear {Counter.clear} / Miss {Counter.miss}\n\nTotal Time: {Counter.elapsed_frame * 0.02f:F2}");
+		sb.Append("Type: ");
+		string stk = (CursorBehavior.is_sticky) ? "Sticky" : "Normal";
+		sb.Append(stk);
+		sb.Append("\n\n");
+		sb.Append($"Success: {Counter.success} / Failure {Counter.failure} / Dummy {Counter.click_on_dummy} / Empty {Counter.click_on_empty_space}\n\nTotal Time: {Counter.elapsed_frame * 0.02f:F2}");
 
 		/*sb.Append("\n\nElapsed Time\n");
 		for (int i = 0; i < Counter.elapsed_frame_result.Count; ++i) {
