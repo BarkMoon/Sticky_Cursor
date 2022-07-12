@@ -404,7 +404,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal_target: {fileID: 9136244517799920543, guid: d1b2b9bae6f1d2544bdccf41752b9b95, type: 3}
   dummy_target: {fileID: 3708744155743268258, guid: 4b7c542f866ee954b9732c90389d026d, type: 3}
-  dummy_num: 10
+  dummy_num: 0
   goal: {fileID: 0}
   dummies: []
 --- !u!4 &741521401
