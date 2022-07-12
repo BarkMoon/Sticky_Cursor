@@ -1,4 +1,8 @@
 en / [ja](README.ja.md)
+
+## What is "Sticky Cursor"?
+Sticky Cursor is a technique to facilitate the task of moving target selection, by moving together with the target.
+
 ## ABSTRACT
 There are many applications that consist of moving objects which require users to
 select them with a cursor, such as 3D simulations, video games and air traffic control
@@ -12,9 +16,6 @@ there was a little difference in the completion time of the task, but that the p
 were able to select the moving targets and more correctly than the traditional cursor.
 Also, most of the participants preferred the Sticky Cursor to the traditional cursor. We
 discussed the reasons and potential applications.
-
-## What is "Sticky Cursor"?
-Sticky Cursor is a technique to facilitate the task of moving target selection, by moving together with the target.
 
 ## Environment
 Unity v3.25
